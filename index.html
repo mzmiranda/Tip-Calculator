@@ -1,0 +1,63 @@
+# Tip-Calculator
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    //<h1 class="red"> Hey this is Mireya</h1>
+    
+    <h1 id="title">Tip Calculator</h1>
+    <input id="pre-tip" type="number" placeholder="Pre-tip">
+    <br>
+    <input id="percent" type="number" placeholder="Percent">
+    <br>
+    <button id="Calculate" onclick="CalculateTip()">Calculate</button>
+    <br><br>
+    
+    
+    
+    <script>
+      //var numOfStudents = 5 //interger
+      //var effortRating = 9.6 //float 
+      //var totalEffort = numOfStudents * effortRating
+      //document.write(totalEffort)
+      
+      //var teacher = 'Ryan'
+      //teacher += ' Westerberg'
+      //var fullName = teacher + 'Westerberg'
+      //document.write(fullName)
+      
+      /*Calculate Tip
+      
+        Data:
+        -Pre-tip
+        -Tip Percentage
+        -Tip Amount
+        -Total
+      */
+      
+      
+      function CalculateTip()
+      {
+      var preTipInput = document.getElementById('pre-tip').value
+      var tipPercentageInput = '0.' + document.getElementById('percent').value
+      
+      var preTip = Number(preTipInput)
+      var tipPercentage = Number(tipPercentageInput)
+      var tipAmount = preTip * tipPercentage
+      var total = preTip + tipAmount
+      console.log(total)
+      total = total.toFixed(2)
+      
+      var message = 'Your total bill, with tip is: $' + total 
+      
+      document.write(message)  
+      }
+      
+    </script>
+  </body>
+</html>
